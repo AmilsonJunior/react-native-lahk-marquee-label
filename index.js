@@ -29,13 +29,8 @@ export default class MarqueeLabel extends Component {
     let newText = nextProps.text || nextProps.children || '';
     let oldText = this.props.text || this.props.children || '';
     if (newText !== oldText) {
-      this.state.animation.stop();
       this.setState({
         text: newText,
-        textWidth: 0,
-        textHeight: 0,
-        duration: 0,
-        animation: null
       });
     }
   }
